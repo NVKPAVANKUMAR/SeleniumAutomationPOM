@@ -1,0 +1,9 @@
+utilities\ScreenshotUtility.class
+pages\HomePage.class
+pages\SignUpPage.class
+utilities\RandomNameGenerator.class
+pages\RegistrationPage.class
+utilities\RandomPasswordGenerator.class
+utilities\ReportGenerator.class
+driver\BrowserInstance.class
+utilities\ConfigParser.class
