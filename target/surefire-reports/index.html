@@ -140,8 +140,8 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;8&quot; verbose=&quot;0&quot; name=&quot;tests.TestRunner&quot;&gt;
-  &lt;test thread-count=&quot;8&quot; verbose=&quot;0&quot; name=&quot;Command line test&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;tests.TestRunner&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Command line test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.TestRunner&quot;/&gt;
     &lt;/classes&gt;
@@ -187,7 +187,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test_SignUp')
 data.setCell(0, 2, 'tests.TestRunner')
-data.setCell(0, 3, 7760);
+data.setCell(0, 3, 7598);
 window.suiteTableData['tests.TestRunner']= { tableData: data, tableDiv: 'times-div-tests.TestRunner'}
 return data;
 }
@@ -225,11 +225,11 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">test_SignUp</span>
-                <span class="method-start">27901 ms</span>
+                <span class="method-start">20019 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">35662 ms</span>
+                <span class="method-start">27618 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,8 +1,12 @@
 utilities\ScreenshotUtility.class
 pages\HomePage.class
+config\Config.class
 pages\SignUpPage.class
 pages\RegistrationPage.class
 utilities\RandomPasswordGenerator.class
+utilities\RandomEmailGenerator.class
 utilities\ReportGenerator.class
 driver\BrowserInstance.class
 utilities\ConfigParser.class
+config\Application_Data.class
+pages\MyAccountPage.class

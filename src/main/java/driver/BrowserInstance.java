@@ -1,6 +1,5 @@
 package driver;
 
-import config.Application_Data;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,6 +12,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -29,22 +29,17 @@ public class BrowserInstance {
     @SuppressWarnings("deprecation")
     public static void initiateDriver(String browserName) throws IOException {
         if (browserName.equalsIgnoreCase("chrome")) {
-            /*service = new ChromeDriverService.Builder()
+            service = new ChromeDriverService.Builder()
                     .usingDriverExecutable(new File("DriverJars/chromedriver.exe"))
                     .usingAnyFreePort()
                     .build();
             service.start();
             option = new ChromeOptions();
             option.addArguments("--incognito");
-            driver = new RemoteWebDriver(service.getUrl(), option);*/
-                System.setProperty("webdriver.chrome.driver", Application_Data.CHROME_DRIVER_PATH);
-                DesiredCapabilities capability = DesiredCapabilities.chrome();
-                capability.setBrowserName(DesiredCapabilities.chrome().getBrowserName());
-                capability.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-                capability.setCapability("ignoreZoomSetting", true);
-                 driver = new ChromeDriver(capability);
-                //chromeDriver.manage().window().maximize();
-               // return chromeDriver;
+            driver = new RemoteWebDriver(service.getUrl(), option);
+            driver.manage().window().maximize();
+
+
             }
          else if (browserName.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", "DriverJars/geckodriver.exe");
