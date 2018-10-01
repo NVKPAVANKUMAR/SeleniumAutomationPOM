@@ -29,18 +29,17 @@ public class BrowserInstance {
     @SuppressWarnings("deprecation")
     public static void initiateDriver(String browserName) throws IOException {
         if (browserName.equalsIgnoreCase("chrome")) {
-            service = new ChromeDriverService.Builder()
+            /*service = new ChromeDriverService.Builder()
                     .usingDriverExecutable(new File("DriverJars/chromedriver.exe"))
                     .usingAnyFreePort()
                     .build();
             service.start();
             option = new ChromeOptions();
             option.addArguments("--incognito");
-            driver = new RemoteWebDriver(service.getUrl(), option);
+            driver = new RemoteWebDriver(service.getUrl(), option);*/
+            driver = new ChromeDriver();
             driver.manage().window().maximize();
-
-
-            }
+        }
          else if (browserName.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", "DriverJars/geckodriver.exe");
             driver = new FirefoxDriver();
@@ -49,6 +48,7 @@ public class BrowserInstance {
             capability.setPlatform(Platform.WINDOWS);
             capability.setBrowserName("chrome");
             capability.setVersion("66");
+            capability.setCapability("browserstack.networkLogs","true");
             capability.setCapability("browserstack.debug", "true");
             URL browserStackUrl = new URL(URL);
             driver = new RemoteWebDriver(browserStackUrl, capability);
