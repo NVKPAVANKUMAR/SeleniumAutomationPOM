@@ -1,2 +1,2 @@
 # SeleniumAutomationPOM
-[![CircleCI](https://circleci.com/gh/NVKPAVANKUMAR/SeleniumAutomationPOM.svg?style=svg)](https://circleci.com/gh/NVKPAVANKUMAR/SeleniumAutomationPOM)
+https://travis-ci.com/NVKPAVANKUMAR/SeleniumAutomationPOM.svg?branch=master
