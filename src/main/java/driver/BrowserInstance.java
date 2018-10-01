@@ -37,7 +37,7 @@ public class BrowserInstance {
             option = new ChromeOptions();
             option.addArguments("--incognito");
             driver = new RemoteWebDriver(service.getUrl(), option);*/
-            System.setProperty("webdriver.chrome.driver", "DriverJars/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "/tmp/chromedriver");
             driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
